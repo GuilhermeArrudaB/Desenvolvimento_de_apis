@@ -27,11 +27,25 @@ function main(){
     console.log(listar());
 }
 
+function buscarPorId(id){
+    for (let produto of listaProdutos){
+        if(produto.id === id){
+            return produto;
+        }
+    }
+}
+
 inserir({
     nome: 'feijão',
     categoria: 'alimento',
     preco: 9.20
 })
 
-main();
+console.log(listar());
+console.log(buscarPorId(5));
+console.log(buscarPorId(2));
+
+
+
+
 
