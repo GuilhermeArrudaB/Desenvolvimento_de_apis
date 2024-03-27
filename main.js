@@ -1,3 +1,4 @@
+let idGerador = 2;
 let listaProdutos = [
     {
         id:1,
@@ -17,8 +18,20 @@ function listar(){
     return listaProdutos;
 }
 
+function inserir(produto){
+    produto.id = idGerador++
+    listaProdutos.push(produto);
+}
+
 function main(){
     console.log(listar());
 }
 
+inserir({
+    nome: 'feijão',
+    categoria: 'alimento',
+    preco: 9.20
+})
+
 main();
+
